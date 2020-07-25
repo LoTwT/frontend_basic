@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* 过渡效果 */
+            transition: all 2s;
+        }
+
+        img:hover {
+            -webkit-filter: none;
+        }
+
+        .img1 {
+            /* 滤镜属性 */
+            /* grayscale()：设置灰度，默认值是1，100%灰度 */
+            -webkit-filter: grayscale(1);
+
+        }
+
+        .img2 {
+            /* 滤镜属性 */
+            /* brightness()：设置亮度，默认值是1，100%亮度 */
+            -webkit-filter: brightness(0);
+        }
+
+        .img3 {
+            /* 滤镜属性 */
+            /* sepia()：设置褐色，默认值是1，100%褐色 */
+            -webkit-filter: sepia(1);
+        }
+
+        .img4 {
+            /* 滤镜属性 */
+            /* blur()：设置模糊度，单位px */
+            -webkit-filter: blur(5px);
+        }
+
+        .img5 {
+            /* 滤镜属性 */
+            /* contrast()：设置对比度，默认是1；0为没有任何对比度，变为灰色 */
+            -webkit-filter: contrast(0);
+        }
+
+        .img6 {
+            /* 滤镜属性 */
+            /* saturate()：设置饱和度，默认是1 */
+            -webkit-filter: saturate(2);
+        }
+
+        .img7 {
+            /* 滤镜属性 */
+            /* invert()：设置胶片底色效果，默认值是0 */
+            -webkit-filter: invert(1);
+        }
+
+        .img8 {
+            /* 滤镜属性 */
+            /* hue-rotate()：设置色相旋转，默认值是0deg */
+            -webkit-filter: hue-rotate(90deg);
+        }
+
+        .img9 {
+            -webkit-filter: blur(10px) brightness(20) grayscale(1);
+            transition: all 10s;
+        }
+
+        .img9:hover {
+            -webkit-filter: blur(0px) brightness(1) grayscale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="img1" src="./img/lushico.jpg">
+    <img class="img2" src="./img/lushico.jpg">
+    <img class="img3" src="./img/lushico.jpg">
+    <img class="img4" src="./img/lushico.jpg">
+    <img class="img5" src="./img/lushico.jpg">
+    <img class="img6" src="./img/lushico.jpg">
+    <img class="img7" src="./img/lushico.jpg">
+    <img class="img8" src="./img/lushico.jpg">
+
+    <img class="img9" src="./img/lushico.jpg">
+</body>
+
+</html>
