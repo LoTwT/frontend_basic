@@ -1,0 +1,119 @@
+html, body {
+    /* overflow: hidden; */
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.lifang {
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+
+.choose {
+    width: 900px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: #999999;
+    border: solid 1px #cccccc;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#front:checked~.lifang {
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+
+#back:checked~.lifang {
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+#left:checked~.lifang {
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+#right:checked~.lifang {
+    transform: rotate3d(0, 1, 0, -90deg);
+}
+
+#top:checked~.lifang {
+    transform: rotate3d(1, 0, 0, -90deg);
+}
+
+#bottom:checked~.lifang {
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+
+/* transform: scale(放大的倍数); */
+/* #big:checked~.lifang {
+    transform: scale(2) rotate3d(1, 0, 0, 90deg);
+} */
+
+#small:checked~.lifang {
+    transform: scale(0.5) rotate3d(1, 0, 0, 90deg);
+}
+
+#big:checked~.lifang {
+    transform: translateZ(500px) rotate3d(1, 0, 0, 90deg);
+}
+
+/* #small:checked~.lifang {
+    transform: translateZ(-500px) rotate3d(1, 0, 0, 90deg);
+} */
+
+#front:checked~.choose [for="front"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#back:checked~.choose [for="back"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#left:checked~.choose [for="left"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#right:checked~.choose [for="right"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#top:checked~.choose [for="top"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#bottom:checked~.choose [for="bottom"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#big:checked~.choose [for="big"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}
+
+#small:checked~.choose [for="small"] {
+    background: #ccc;
+    color: #fff;
+    box-shadow: 0 0 30px #999999;
+}

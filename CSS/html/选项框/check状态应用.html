@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 300px;
+            height: 300px;
+            border: solid 1px #999;
+        }
+
+        #yellow:checked~#d1 {
+            background: yellow;
+        }
+
+        #green:checked~#d1 {
+            background: green;
+        }
+
+        #red:checked~#d1 {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>请选择你喜欢的颜色</h3>
+    黄色<input type="radio" name="favcolor" id="yellow" value="黄">
+    绿色<input type="radio" name="favcolor" id="green" value="绿">
+    红色<input type="radio" name="favcolor" id="red" value="红">
+
+    <div id="d1"></div>
+</body>
+
+</html>

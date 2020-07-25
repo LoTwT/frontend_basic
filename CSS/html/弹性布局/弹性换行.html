@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* parent元素为弹性容器 */
+        .parent {
+            width: 800px;
+            height: 800px;
+            border: solid 1px #ccc;
+            margin: 0 auto;
+            /* 设置弹性容器 */
+            display: flex;
+            /* 设置弹性主轴方向 */
+            flex-direction: row;
+            /* 设置主轴的内容分布 */
+            justify-content: space-evenly;
+            /* 设置测轴的内容分布 */
+            align-items: center;
+            /* 设置换行 */
+            flex-wrap: wrap;
+            /* 设置多行的分布 */
+            align-content: flex-start;
+        }
+
+        /* child元素为的弹性子元素 */
+        .child {
+            width: 200px;
+            height: 200px;
+        }
+
+        .c1 {
+            background-color: skyblue;
+        }
+
+        .c2 {
+            background-color: orange;
+        }
+
+        .c3 {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 父元素 -->
+    <div class="parent">
+        <!-- 3个子元素 -->
+        <div class="child c1">
+            1
+            <!-- <h1>h1不是弹性子元素！子元素的子元素，不是弹性子元素！</h1> -->
+        </div>
+        <div class="child c2">2</div>
+        <div class="child c3">3</div>
+        <div class="child c1">1</div>
+        <div class="child c2">2</div>
+        <div class="child c3">3</div>
+        <div class="child c1">1</div>
+        <div class="child c2">2</div>
+        <div class="child c3">3</div>
+        <div class="child c1">1</div>
+        <div class="child c2">2</div>
+        <div class="child c3">3</div>
+    </div>
+</body>
+
+</html>

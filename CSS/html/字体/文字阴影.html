@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 600px;
+            height: 200px;
+            border: solid 1px #bbbbbb;
+            margin: 0 auto;
+            /* 字体大小 */
+            font-size: 50px;
+            /* 字体类型，设置的字体必须在系统内存在，如果没有，则默认按照系统字体样式显示 */
+            font-family: 宋体;
+            /* 字体粗细，默认正常的字体粗细，是一个相对的值，如果设置900，但系统没有这么粗的字体，则按照默认样式显示 */
+            font-weight: 900;
+            /* 字体颜色 */
+            color: aqua;
+            /* 文字排布，默认向左 */
+            text-align: center;
+            /* 文字行高 */
+            line-height: 200px;
+            /* 文字阴影，水平偏移距离 垂直偏移距离 模糊度阴影的颜色 */
+            text-shadow: 10px 5px 5px black;
+        }
+
+        .d2 {
+            width: 600px;
+            height: 200px;
+            border: solid 1px #bbbbbb;
+            margin: 0 auto;
+            /* 字体大小 */
+            font-size: 50px;
+            /* 字体类型，设置的字体必须在系统内存在，如果没有，则默认按照系统字体样式显示 */
+            font-family: 宋体;
+            /* 字体粗细，默认正常的字体粗细，是一个相对的值，如果设置900，但系统没有这么粗的字体，则按照默认样式显示 */
+            font-weight: 900;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 文字排布，默认向左 */
+            text-align: center;
+            /* 文字行高 */
+            line-height: 200px;
+            /* 文字阴影，水平偏移距离 垂直偏移距离 模糊度阴影的颜色 */
+            text-shadow: 0px 0px 5px black;
+        }
+
+        .d3 {
+            width: 600px;
+            height: 200px;
+            border: solid 1px #bbbbbb;
+            margin: 0 auto;
+            /* 字体大小 */
+            font-size: 50px;
+            /* 字体类型，设置的字体必须在系统内存在，如果没有，则默认按照系统字体样式显示 */
+            font-family: 宋体;
+            /* 字体粗细，默认正常的字体粗细，是一个相对的值，如果设置900，但系统没有这么粗的字体，则按照默认样式显示 */
+            font-weight: 900;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 文字排布，默认向左 */
+            text-align: center;
+            /* 文字行高 */
+            line-height: 200px;
+            /* 文字阴影，水平偏移距离 垂直偏移距离 模糊度 阴影的颜色 */
+            /* 多个阴影可以叠加 */
+            text-shadow: 0px 0px 20px yellow, 0px 0px 10px orange, 0px 0px 10px orangered, 0px 0px 5px red;
+            /* 动画 */
+            animation: donghua 3s infinite alternate;
+        }
+
+        @keyframes donghua {
+            from {
+                text-shadow: 0px 0px 20px yellow, 0px 0px 10px orange, 0px 0px 10px orangered, 0px 0px 5px red;
+            }
+
+            to {
+                text-shadow: 0px 0px 10px yellow, 0px 0px 10px orange, 0px 0px 5px orangered, 0px 0px 2px red;
+            }
+        }
+
+        .d4 {
+            width: 800px;
+            height: 200px;
+            border: solid 1px #bbbbbb;
+            margin: 0 auto;
+            /* 字体大小 */
+            font-size: 100px;
+            /* 字体类型，设置的字体必须在系统内存在，如果没有，则默认按照系统字体样式显示 */
+            font-family: 宋体;
+            /* 字体粗细，默认正常的字体粗细，是一个相对的值，如果设置900，但系统没有这么粗的字体，则按照默认样式显示 */
+            font-weight: 900;
+            /* 字体颜色 */
+            color: #ffffff;
+            /* 文字排布，默认向左 */
+            text-align: center;
+            /* 文字行高 */
+            line-height: 200px;
+            /* 文字阴影，水平偏移距离 垂直偏移距离 模糊度阴影的颜色 */
+            /* 多个阴影可以叠加 */
+            text-shadow: 1px 1px 0px yellow, 2px 2px 0px orange, 3px 3px 0px orangered, 4px 4px 0px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        Hello World!
+    </div>
+    <div class="d2">
+        Hello World!
+    </div>
+    <div class="d3">
+        Hello World!
+    </div>
+    <div class="d4">
+        Hello World!
+    </div>
+</body>
+
+</html>

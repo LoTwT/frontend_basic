@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 300px;
+            height: 200px;
+            /* border: solid 1px #cccccc; */
+            /* 背景图片 */
+            background-image: url(../../img/mingren.png);
+            /* 背景图片大小 */
+            background-size: auto;
+            /* 背景图片的位置
+            background-position: x y;
+            */
+            /* animation: lxw 2s steps(16) infinite; */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @keyframes lxw {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 -3072px;
+            }
+        }
+
+        #mingren:checked~#d1 {
+            animation: lxw 2s steps(16) infinite;
+        }
+
+        #d2 {
+            width: 300px;
+            height: 200px;
+            border: solid 1px #cccccc;
+            background-image: url(../../img/qianniao.png);
+            background-size: auto;
+            animation: qn 2s steps(13) infinite;
+        }
+
+        @keyframes qn {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 -2496px;
+            }
+        }
+
+        #d3 {
+            width: 300px;
+            height: 200px;
+            /* border: solid 1px #cccccc; */
+            background-image: url(../../img/lyj.png);
+            background-size: 960px auto;
+            animation: lyj 2s steps(23) infinite;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @keyframes lyj {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 -4416px;
+            }
+        }
+
+        .main {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            border: solid 1px #cccccc;
+            position: relative;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            background: skyblue;
+            border: solid 1px #ccc;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" name="lxw" id="mingren" hidden="hidden">
+        <div id="d1"></div>
+        <!-- <div id="d2"></div> -->
+        <div id="d3"></div>
+    </div>
+    <label for="mingren">搓螺旋丸</label>
+</body>
+
+</html>

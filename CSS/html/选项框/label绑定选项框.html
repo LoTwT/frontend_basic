@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 300px;
+            height: 300px;
+            border: solid 1px #999;
+        }
+
+        #yellow:checked~#d1 {
+            background: yellow;
+        }
+
+        #green:checked~#d1 {
+            background: green;
+        }
+
+        #red:checked~#d1 {
+            background: red;
+        }
+        .btn {
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            line-height: 100px;
+            border: solid 1px #999;
+            border-radius: 20px;
+            box-shadow: 0 0 0px #333;
+            transition: all 0.5s;
+        }
+        .btn:hover {
+            box-shadow: 0 0 30px #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- label可绑定输入框，for绑定选项框的id -->
+    <label class="btn" for="yellow">
+        选择为黄色
+    </label>
+    <label class="btn" for="green">
+        选择为绿色
+    </label>
+    <label class="btn" for="red">
+        选择为红色
+    </label>
+    <!-- hidden="hidden"用于隐藏输入框 -->
+    <h3>请选择你喜欢的颜色</h3>
+    黄色<input type="radio" name="favcolor" id="yellow" value="黄" hidden="hidden">
+    绿色<input type="radio" name="favcolor" id="green" value="绿" hidden="hidden">
+    红色<input type="radio" name="favcolor" id="red" value="红" hidden="hidden">
+
+    <div id="d1"></div>
+</body>
+
+</html>

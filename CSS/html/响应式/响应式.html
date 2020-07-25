@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 25%;
+            height: 200px;
+            background: skyblue;
+        }
+
+        /* 媒体查询 */
+        /* 移动端设定 */
+        /* 设定小于600像素时的样式 */
+        @media only screen and (max-width: 600px) {
+            .d1 {
+                width: 100%;
+                background: red;
+            }
+        }
+
+        /* PC端设定 */
+        /* 设定大于1200像素的样式 */
+        @media only screen and (min-width: 1200px) {
+            .d1 {
+                width: 33%;
+                background: yellow;
+            }
+        }
+
+        /* 平板设定 */
+        /* 设定600-1200px的样式 */
+        @media only screen and (max-width: 1200px) and (min-width: 600px) {
+            .d1 {
+                width: 50%;
+                background: purple;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        大屏幕PC端时，d1占据50%宽度
+        小屏幕移动端时，d1占据100%宽度
+     -->
+    <div class="d1"></div>
+</body>
+
+</html>

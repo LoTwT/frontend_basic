@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            /* 动画
+            animation:综合性的动画设置属性
+            */
+            /* animation: donghua1 3s; */
+            /* 动画名称 */
+            animation-name: donghua1;
+            /* 动画的时间周期 */
+            animation-duration: 3s;
+            /* 动画的变化速度，默认ease，linear，ease-in，ease-out，贝塞尔曲线 */
+            animation-timing-function: ease;
+            /* 动画的延迟时间 */
+            animation-delay: 2s;
+            /* 动画的循环次数，infinite无限循环 */
+            animation-iteration-count: 1;
+            /* 动画的运动方向，默认值normal，alternate奇数次正常运动，偶数次反方向运动，reverse反方向运动，alternate-reverse，奇数次反方向，偶数次正方向 */
+            animation-direction: normal;
+            /* 动画的最后一帧的效果 */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes donghua1 {
+            /* from{} 等同于0%{}*/
+            0%{
+                transform: translate(0, 0);
+            }
+            33.3%{
+                transform: translate(500px, 0);
+            }
+            /* to{} 等同于100%{}*/
+            100%{
+                transform: translate(500px, 400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+</body>
+</html>

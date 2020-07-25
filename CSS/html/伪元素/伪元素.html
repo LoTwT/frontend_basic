@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            width: 0px;
+            height: 0px;
+            /* background: salmon; */
+            border-top: solid 200px transparent;
+            border-bottom: solid 200px transparent;
+            border-left: solid 200px greenyellow;
+            border-right: solid 200px transparent;
+        }
+
+        .chat {
+            width: 600px;
+            line-height: 100px;
+            padding: 30px;
+            font-size: 30px;
+            background-color: lawngreen;
+            margin: 0 auto;
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .chat:before {
+            /* content: "before的内容" */
+            content: "";
+            display: inline-block;
+            width: 0px;
+            height: 0px;
+            /* background-color: skyblue; */
+            border-top: solid 40px transparent;
+            border-bottom: solid 40px transparent;
+            border-left: solid 80px lawngreen;
+            border-right: solid 80px transparent;
+            position: absolute;
+            right: -160px;
+            top: 40px;
+        }
+
+        .chat:after {
+            /* content: "after的内容" */
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div class="chat">
+        这是测试文本。
+    </div>
+</body>
+</html>

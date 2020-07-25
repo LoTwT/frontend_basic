@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 800px;
+            /* 设定父元素高度 */
+            /* height: 600px; */
+            margin: 0 auto;
+            background: lightcyan;
+            /* font-size: 0; */
+        }
+
+        /* 设置一个clear类 */
+        .clear::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .child {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            float: left;
+        }
+
+        /* .clear {
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="parent clear">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+
+        <!-- <div class="clear"></div> -->
+    </div>
+    <h1>helloworld</h1>
+</body>
+</html>
