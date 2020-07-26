@@ -73,6 +73,7 @@
   - [单独设置子元素侧轴排布](#单独设置子元素侧轴排布)
 - [移动端和响应式](#移动端和响应式)
   - [媒体查询](#媒体查询)
+- [盒子模型](#盒子模型)
 
 <!-- /code_chunk_output -->
 
@@ -640,3 +641,13 @@ font-class 是Unicode使用方式的一种变种，主要是解决 Unicode 书�
 设置`@media sceen {}`
 必须加上`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
 [响应式](html/响应式/响应式.html)
+
+---
+
+## 盒子模型
+
+设置`box-sizing: ;`，盒子模型的大小设定。
+
+- content-box，默认值，希望内容大小固定时使用
+- border-box，希望整个盒子大小是固定的，不会因为设置了内边距和border而撑开改变大小
+[盒子模型](html/盒子模型/盒子模型.html)
