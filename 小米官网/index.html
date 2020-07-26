@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置浏览器窗口的分辨率为设计稿的分辨率 -->
+    <meta name="viewport" content="width=375, initial-scale=1.0, user-scalable=no">
+    <title>小米官网</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- .header>(.headerTop>(.logo+(.search>(.icon+input))+.user))+.headerNav>(a*6+span.xhicon) -->
+    <div class="header">
+        <div class="headerTop">
+            <div class="logo"></div>
+            <div class="search">
+                <div class="icon"></div>
+                <input type="text" placeholder="搜索商品名称">
+            </div>
+            <div class="user"></div>
+        </div>
+        <div class="headerNav">
+            <a href="" class="active">推荐</a>
+            <a href="">手机</a>
+            <a href="">智能</a>
+            <a href="">电视</a>
+            <a href="">笔记本</a>
+            <a href="">家电</a>
+
+            <input type="checkbox" name="choose" id="choose" hidden="hidden">
+            <label for="choose" class="xhicon"></label>
+            <div class="xhk">
+                <div class="xhkMain">
+                    <div class="xhkTop">全部</div>
+                    <div class="xhkList">
+                        <a href="" class="active">推荐</a>
+                        <a href="">手机</a>
+                        <a href="">智能</a>
+                        <a href="">电视</a>
+                        <a href="">笔记本</a>
+                        <a href="">家电</a>
+                        <a href="">生活周边</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 轮播 -->
+    <div class="swiper"></div>
+    <!-- 图标列表 -->
+    <!-- .iconList>(a.iconItem>img[src="img/icon$.png"])*10 -->
+    <div class="iconList">
+        <a href="" class="iconItem"><img src="img/icon1.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon2.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon3.gif" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon4.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon5.webp" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon6.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon7.jpg" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon8.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon9.png" alt=""></a>
+        <a href="" class="iconItem"><img src="img/icon10.png" alt=""></a>
+    </div>
+
+    <!-- ad banner -->
+    <!-- .banner>(.lbanner+(.rbanner>.rtbanner+.rbbanner)) -->
+    <div class="banner">
+        <div class="lbanner"></div>
+        <div class="rbanner">
+            <div class="rtbanner"></div>
+            <div class="rbbanner"></div>
+        </div>
+    </div>
+
+    <!-- 每日精选 -->
+    <!-- .jx>(.jxad+.pdList>(.pdItem>(img[src="img/jx$.jpg"]+.title+.brief+.price+.buyBtn))*4) -->
+    <div class="jx">
+        <div class="jxad"></div>
+        <div class="pdList">
+            <div class="pdItem">
+                <img src="img/jx1.jpg" alt="">
+                <div class="title">Redmi Note 8 Pro</div>
+                <div class="brief">6400万全场景四摄</div>
+                <div class="price">￥1399起</div>
+                <div class="buyBtn">立即购买</div>
+            </div>
+            <div class="pdItem">
+                <img src="img/jx2.jpg" alt="">
+                <div class="title">Redmi Note 8</div>
+                <div class="brief">千元4800万四摄</div>
+                <div class="price">￥999起</div>
+                <div class="buyBtn">立即购买</div>
+            </div>
+            <div class="pdItem">
+                <img src="img/jx3.jpg" alt="">
+                <div class="title">Redmi K20 Pro</div>
+                <div class="brief">骁龙855，弹出全面屏</div>
+                <div class="price">￥2299起</div>
+                <div class="buyBtn">立即购买</div>
+            </div>
+            <div class="pdItem">
+                <img src="img/jx4.webp" alt="">
+                <div class="title">Redmi K20</div>
+                <div class="brief">弹出全面屏，4800万三摄</div>
+                <div class="price">￥1799起</div>
+                <div class="buyBtn">立即购买</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <!-- .footer>(.fIcon>(img+span))*4 -->
+    <div class="footer">
+        <div class="fIcon">
+            <div class="img"></div><span>首页</span>
+        </div>
+        <div class="fIcon">
+            <div class="img"></div><span>分类</span>
+        </div>
+        <div class="fIcon">
+            <div class="img"></div><span>购物车</span>
+        </div>
+        <div class="fIcon">
+            <div class="img"></div><span>我的</span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+body {
+    background: rgb(245, 245, 245);
+}
+
+.swiper {
+    width: 375px;
+    height: 188px;
+    background-image: url(../img/swiper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-top: 74px;
+}
+
+.iconList {
+    width: 375px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iconItem {
+    width: 20%;
+    height: 80px;
+}
+
+.iconItem>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* banner */
+.banner {
+    width: 375px;
+    height: 265px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .lbanner,
+.banner .rbanner {
+    width: 186px;
+    height: 265px;
+}
+
+.banner .lbanner {
+    background-image: url(../img/img1.jpg);
+    background-size: 100% 100%;
+}
+
+.banner .rbanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner .rbanner .rtbanner {
+    width: 186px;
+    height: 131px;
+    background-image: url(../img/img2.jpg);
+    background-size: 100% 100%;
+}
+
+.banner .rbanner .rbbanner {
+    width: 186px;
+    height: 131px;
+    background-image: url(../img/img3.jpg);
+    background-size: 100% 100%;
+}
+
+/* jx */
+.jx {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    background: #ffffff;
+    padding-bottom: 60px;
+}
+
+.jxad {
+    width: 375px;
+    height: 230px;
+    background-image: url(../img/jxtop.jpg);
+    background-size: 100% 100%;
+}
+
+.pdList {
+    width: 375px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pdList .pdItem {
+    width: 50%;
+    height: 253px;
+    padding: 3px 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdList .pdItem img {
+    width: 100%;
+    height: auto;
+}
+
+.pdList .pdItem .title {
+    padding-top: 5px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.pdList .pdItem .brief {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.pdList .pdItem .price {
+    font-size: 12px;
+    color: #ea625b;
+}
+
+.pdList .pdItem .buyBtn {
+    width: 105px;
+    height: 31px;
+    text-align: center;
+    line-height: 31px;
+    color: #ffffff;
+    background-color: #ea625b;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* 底部导航 */
+.footer {
+    width: 375px;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0px -2px 10px #cccccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.footer .fIcon {
+    width: 25%;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .fIcon .img {
+    width: 21px;
+    height: 21px;
+    background-size: 100%;
+}
+
+.footer .fIcon span {
+    color: #999999;
+    font-size: 12px;
+}
+
+.footer .fIcon:nth-child(1) .img {
+    background-image: url(../img/hone1.png);
+}
+
+.footer .fIcon:nth-child(2) .img {
+    background-image: url(../img/list1.png);
+}
+
+.footer .fIcon:nth-child(3) .img {
+    background-image: url(../img/buycar1.png);
+}
+
+.footer .fIcon:nth-child(4) .img {
+    background-image: url(../img/center1.png);
+}
+
+.footer .fIcon:nth-child(1):hover .img {
+    background-image: url(../img/hone2.png);
+}
+
+.footer .fIcon:nth-child(2):hover .img {
+    background-image: url(../img/list2.png);
+}
+
+.footer .fIcon:nth-child(3):hover .img {
+    background-image: url(../img/buycar2.png);
+}
+
+.footer .fIcon:nth-child(4):hover .img {
+    background-image: url(../img/center2.png);
+}
+
+.footer .fIcon:nth-child(1):hover span {
+    color: #ff6700;
+}
+
+.footer .fIcon:nth-child(2):hover span {
+    color: #ff6700;
+}
+
+.footer .fIcon:nth-child(3):hover span {
+    color: #ff6700;
+}
+
+.footer .fIcon:nth-child(4):hover span {
+    color: #ff6700;
+}
