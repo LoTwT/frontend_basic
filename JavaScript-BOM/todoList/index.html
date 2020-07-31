@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 
+        待办事项网页需求：
+        1/移动端为主/pc端可用
+        2/输入框：输入待办事项
+        3/未成列表：能够显示出未完成的内容，已经可以对每一项内容，进行修改（改完成，删除）
+        4/完成列表：能够显示完成的内容，可以对每一项内容进行修改（改成未完成，删除）
+        
+        项目制作顺序：
+        1/写html结构
+        2/css样式
+        3/JavaScript功能
+            输入框的输入功能
+            未完成列表的显示功能
+            完成列表的显示功能
+            修改和删除列表的功能
+    -->
+
+
+    <div class="main">
+        <div class="header">
+            <div class="logo">LoTodo</div>
+            <input type="text" id="input" placeholder="请输入待办事项" required="required">
+        </div>
+        <div class="doing todo">
+            <h3><span class="title">正在进行</span><span class="num"></span></h3>
+            <div class="list">
+                <!-- <div class="todoItem">
+                    <input type="checkbox">
+                    <div class="content">吃东西</div>
+                    <div class="del">删除</div>
+                </div> -->
+            </div>
+        </div>
+        <div class="done todo">
+            <h3><span class="title">已经完成</span><span class="num"></span></h3>
+            <div class="list">
+                <!-- <div class="todoItem">
+                    <input type="checkbox" checked="checked">
+                    <div class="content">吃东西</div>
+                    <div class="del">删除</div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Xys.js"></script>
+    <script>
+        if (localStorage.todoList == undefined) {
+            // 设定一个全局变量，将待办事项保存到其中
+            var todoList = []
+        } else {
+            // 将JSON格式字符串转为对象
+            todoList = JSON.parse(localStorage.todoList)
+        }
+
+        // 获取doing list对象
+        var doingListDiv = document.querySelector(".doing .list")
+        // 获取done list对象
+        var doneListDiv = document.querySelector(".done .list")
+
+        var mainDiv = document.querySelector(".main")
+        // 获取输入框对象
+        var inputDom = document.querySelector("#input")
+        // 监听输入按键事件
+        inputDom.onkeydown = function (event) {
+            // 当按下"Enter"键，获取输入框内容，并生成未完成列表
+            if (event.key == "Enter") {
+                // 获取输入框内容
+                var value = inputDom.value
+                var objItem = {
+                    content: value,
+                    isDone: false,
+                }
+                todoList.push(objItem)
+                render(todoList)
+                inputDom.value = ""
+            }
+        }
+
+        // 计算todoList中两项的数量
+        function showNum() {
+            var numDoing = 0;
+            var numDone = 0;
+            todoList.forEach(function (item, i) {
+                // if (item.isDone == false) {
+                //     numDoing += 1
+                // } else {
+                //     numDone += 1
+                // }
+                item.isDone == false ? numDoing++ : numDone++
+            })
+            var nums = {
+                numDoing: numDoing,
+                numDone: numDone
+            }
+            return nums
+        }
+
+
+        function render(todoList) {
+            // 将对象转化为JSON字符串
+            localStorage.todoList = JSON.stringify(todoList)
+
+            // 每次渲染之前，清空内容
+            doingListDiv.innerHTML = ""
+            doneListDiv.innerHTML = ""
+            todoList.forEach(function (item, index) {
+                var todoItem = document.createElement("div")
+                todoItem.className = "todoItem"
+                if (item.isDone) {
+                    todoItem.innerHTML = `
+                        <input type="checkbox" checked="checked" data-index="${index}">
+                        <div class="content">` + item.content + `</div>
+                        <div class="del" data-index="${index}">删除</div>
+                    `
+                    doneListDiv.appendChild(todoItem)
+                } else {
+                    todoItem.innerHTML = `
+                        <input type="checkbox" data-index="${index}">
+                        <div class="content">` + item.content + `</div>
+                        <div class="del" data-index="${index}">删除</div>
+                    `
+                    doingListDiv.appendChild(todoItem)
+                }
+            })
+            var numDoingSpan = document.querySelector(".doing .num")
+            var numDoneSpan = document.querySelector(".done .num")
+            var nums = showNum()
+
+            numDoingSpan.innerHTML = nums.numDoing
+            numDoneSpan.innerHTML = nums.numDone
+        }
+
+        render(todoList)
+
+        doingListDiv.onchange = function (event) {
+            // 通过事件对象找到DOM对象，获取索引值
+            var index = parseInt(event.target.dataset.index)
+            todoList[index].isDone = true
+            render(todoList)
+        }
+
+        doneListDiv.onchange = function (event) {
+            // 通过事件对象找到DOM对象，获取索引值
+            var index = parseInt(event.target.dataset.index)
+            todoList[index].isDone = false
+            render(todoList)
+        }
+
+        mainDiv.onclick = function (event) {
+            if (event.target.className == "del") {
+                var index = parseInt(event.target.dataset.index)
+                todoList.splice(index, 1)
+                render(todoList)
+            }
+        }
+    </script>
+</body>
+
+</html>
