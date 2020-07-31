@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        testEvent.addEvent("事件名称"，事件执行函数)
+
+        // 自定义事件
+        test.addEvent("click", fn1)
+        test.addEvent("click", fn2)
+        test.addEvent("click", fn3)
+        // 自定义触发
+        testEvent.emit("click")
+
+        testEvent("addBuyCar", fn1) // 发送用户消息，添加购物车成功
+        testEvent("addBuyCar", fn2) // 购物车栏目里，商品数量+1
+        testEvent("addBuyCar", fn3) // 往后台发送购物车添加了新数量
+
+        testEvent.emit("addBuyCar") // 触发购物车事件，事件里的所有函数在此时执行
+     -->
+
+
+    <script>
+        var testEvent = {
+            event: {
+                // eventName: [fn1, fn2, fn3]
+            },
+            addEvent: function (eventName, fn) {
+                if (this.event[eventName] == undefined) {
+                    this.event[eventName] = []
+                }
+                this.event[eventName].push(fn)
+            },
+            emit: function (eventName, eventMsg) {
+                var fnList = this.event[eventName]
+                fnList.forEach(function (item, i) {
+                    item(eventMsg)
+                })
+            },
+            removeEvent: function (eventName, fn) {
+                var fnList = this.event[eventName]
+                var that = this
+                fnList.forEach(function (item, i) {
+                    if (fn == item) {
+                        that.event[eventName].splice(i, 1)
+                    }
+                })
+            }
+        }
+        // 设计模式：观察者模式/订阅者模式/事件模式
+        // 观察者模式，希望定制自定义的事件，通过触发自定义事件，达到将一系列事先定义好的事件触发的目的
+
+        var fn1 = function (event) {
+            console.log(event);
+            console.log("购买周杰伦的演唱会门票");
+        }
+
+        testEvent.addEvent("周杰伦演唱会", fn1)
+
+        testEvent.addEvent("周杰伦演唱会", function (event) {
+            console.log("去演唱会门口倒卖周杰伦门票");
+        })
+
+        testEvent.addEvent("周杰伦演唱会", function (event) {
+            console.log("联系演唱会当天的舞蹈");
+        })
+
+        testEvent.removeEvent("周杰伦演唱会", fn1)
+    </script>
+</body>
+
+</html>

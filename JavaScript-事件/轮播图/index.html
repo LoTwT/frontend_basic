@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- .swiper>(.imgList>.imgItem*5)+(.btnList>.btn*2) -->
+    <div class="swiper">
+        <div class="imgList">
+            <div class="imgItem active" style="background-image: url(img/img1.webp);"></div>
+            <div class="imgItem" style="background-image: url(img/img2.jpg);"></div>
+            <div class="imgItem" style="background-image: url(img/img3.webp);"></div>
+            <div class="imgItem" style="background-image: url(img/img4.webp);"></div>
+            <div class="imgItem" style="background-image: url(img/img5.webp);"></div>
+        </div>
+        <div class="btnList">
+            <div class="btn prev">
+                <</div> <div class="btn next">>
+            </div>
+        </div>
+
+        <!-- .circleList>.circleItem*5 -->
+        <div class="circleList">
+            <div id="c0" class="circleItem active"></div>
+            <div id="c1" class="circleItem"></div>
+            <div id="c2" class="circleItem"></div>
+            <div id="c3" class="circleItem"></div>
+            <div id="c4" class="circleItem"></div>
+        </div>
+    </div>
+
+    <script>
+        var prevBtn = document.querySelector(".swiper .prev")
+        var nextBtn = document.querySelector(".swiper .next")
+        var imgListDivs = document.querySelectorAll(".swiper .imgItem")
+        var circleDivs = document.querySelectorAll(".swiper .circleItem")
+
+        // 默认图片为第一张
+        var currentImg = 0
+
+        nextBtn.onclick = function () {
+            currentImg += 1
+            if (currentImg >= imgListDivs.length) {
+                currentImg = 0
+            }
+            renderSwiper()
+            // 初始化，将所有的img列表的active去掉
+            // imgListDivs.forEach(function (item, i) {
+            //     item.classList.remove("active")
+            // })
+
+            // circleDivs.forEach(function (item, i) {
+            //     item.classList.remove("active")
+            // })
+
+            // imgListDivs[currentImg].classList.add("active")
+            // circleDivs[currentImg].classList.add("active")
+        }
+
+        prevBtn.onclick = function () {
+            currentImg -= 1
+            if (currentImg < 0) {
+                currentImg = imgListDivs.length - 1
+            }
+            renderSwiper()
+            // 初始化，将所有的img列表的active去掉
+            // imgListDivs.forEach(function (item, i) {
+            //     item.classList.remove("active")
+            // })
+
+            // circleDivs.forEach(function (item, i) {
+            //     item.classList.remove("active")
+            // })
+
+            // imgListDivs[currentImg].classList.add("active")
+            // circleDivs[currentImg].classList.add("active")
+        }
+
+        function renderSwiper() {
+            // 初始化，将所有的img列表的active去掉
+            imgListDivs.forEach(function (item, i) {
+                item.classList.remove("active")
+            })
+
+            circleDivs.forEach(function (item, i) {
+                item.classList.remove("active")
+            })
+
+            imgListDivs[currentImg].classList.add("active")
+            circleDivs[currentImg].classList.add("active")
+        }
+
+        circleDivs.forEach(function (item, i) {
+            item.onclick = function () {
+                var index = parseInt(item.id[1])
+                currentImg = index
+
+                renderSwiper()
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./myAlert.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <button type="button">是否跳转至百度首页</button>
+
+    <script>
+        var button = document.querySelector("button")
+        button.onclick = function () {
+            myAlert({
+                title: "温馨提醒",
+                content: "是否跳转至百度首页",
+                confirmFn: function () {
+                    location.href = "https://www.baidu.com"
+                },
+                cancelFn: function () {
+                    var h1 = document.createElement("h1")
+                    h1.innerHTML = "用户已取消跳转。"
+                    document.body.appendChild(h1)
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

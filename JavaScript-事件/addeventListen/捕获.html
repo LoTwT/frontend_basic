@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <button>按钮</button>
+        </div>
+    </div>
+
+    <script>
+        var btn = document.querySelector("button")
+        var parent = document.querySelector(".parent")
+        var child = document.querySelector(".child")
+        var body = document.querySelector("body")
+        var html = document.querySelector("html")
+
+        btn.addEventListener("click", function(event) {
+            console.log("btn listen");
+            event.testTag = "btnEvent"
+        }, true)
+
+        child.addEventListener("click", function(event) {
+            console.log("child listen");
+            console.log(event);
+        }, true)
+
+        parent.addEventListener("click", function() {
+            console.log("parent listen");
+        }, true)
+
+        
+
+        body.addEventListener("click", function() {
+            console.log("body listen");
+        }, true)
+
+        html.addEventListener("click", function() {
+            console.log("html listen");
+        }, true)
+    </script>
+</body>
+</html>

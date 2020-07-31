@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #d1 {
+            width: 600px;
+            height: 600px;
+            background-color: skyblue;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <script>
+        // 某个元素有鼠标移入
+        var d1 = document.querySelector("#d1")
+        d1.onmouseenter = function (e) {
+            console.log(e)
+            d1.style.backgroundColor = "orange"
+        }
+
+        // 某个元素有鼠标移出
+        d1.onmouseleave = function (e) {
+            console.log(e);
+            d1.style.backgroundColor = "skyblue"
+        }
+
+        // 鼠标在元素上移动事件
+        d1.onmousemove = function (e) {
+            if (isDraw == true) {
+                console.log(e);
+                var circleDiv = document.createElement("div")
+                circleDiv.style.width = "10px"
+                circleDiv.style.height = "10px"
+                circleDiv.style.borderRadius = "5px"
+                circleDiv.style.backgroundColor = "red"
+
+                var x = e.pageX
+                var y = e.pageY
+
+                circleDiv.style.position = "absolute"
+                circleDiv.style.left = (x - 5) + "px"
+                circleDiv.style.top = (y - 5) + "px"
+
+                d1.appendChild(circleDiv)
+            }
+
+        }
+
+        var isDraw = false
+        d1.onclick = function (e) {
+            console.log(e);
+            isDraw = !isDraw
+        }
+    </script>
+</body>
+
+</html>

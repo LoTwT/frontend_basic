@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- .zhezhao>.alert>((.header>(span.title{温馨提示}+span.close{x}))+.main+.btnList>(.btn*2)) -->
+    <!-- <div class="zhezhao">
+        <div class="alert">
+            <div class="header">
+                <span class="title">温馨提示</span>
+                <span class="close">x</span>
+            </div>
+            <div class="main">
+                是否在页面添加一个蓝色的div？
+            </div>
+            <div class="btnList">
+                <div class="btn confirm">确定</div>
+                <div class="btn cancel">取消</div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <button class="appendDiv" type="button">是否在页面添加一个蓝色的div？</button>
+    <button class="removeDiv" type="button">移除div</button>
+    <script>
+        var btn = document.querySelector(".appendDiv")
+        btn.onclick = function () {
+            var body = document.querySelector("body")
+            var zhezhao = document.createElement("div")
+
+            zhezhao.className = "zhezhao"
+            zhezhao.innerHTML = `
+            <div class="alert">
+                <div class="header">
+                    <span class="title">温馨提示</span>
+                    <span class="close">x</span>
+                </div>
+                <div class="main">
+                    是否在页面添加一个蓝色的div？
+                </div>
+                <div class="btnList">
+                    <div class="btn confirm">确定</div>
+                    <div class="btn cancel">取消</div>
+                </div>
+            </div>
+            `
+            body.appendChild(zhezhao)
+
+            // 获取close元素
+            var closeDiv = document.querySelector(".close")
+            closeDiv.onclick = function () {
+                body.removeChild(zhezhao)
+            }
+
+            // 获取确定按钮
+            var confirmDiv = document.querySelector(".btn.confirm")
+            confirmDiv.onclick = function () {
+                var blueDiv = document.createElement("div")
+                blueDiv.className = "BlueDiv"
+                blueDiv.style.width = "200px"
+                blueDiv.style.height = "200px"
+                blueDiv.style.backgroundColor = "skyblue"
+                body.appendChild(blueDiv)
+                body.removeChild(zhezhao)
+            }
+
+            // 获取取消按钮
+            var cancelDiv = document.querySelector(".btn.cancel")
+            cancelDiv.onclick = function () {
+                body.removeChild(zhezhao)
+            }
+
+            // 获取移除按钮
+            var removeDiv = document.querySelector(".removeDiv")
+            removeDiv.onclick = function () {
+                body.removeChild(document.querySelector(".BlueDiv"))
+            }
+        }
+    </script>
+</body>
+
+</html>

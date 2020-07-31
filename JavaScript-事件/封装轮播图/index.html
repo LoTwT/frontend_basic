@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 
+        调用：swiper(轮播图生成的位置，图片列表)
+        效果：在具体的某个位置上生成轮播图
+     -->
+
+    <div class="swiper swiper1"></div>
+    <div class="swiper swiper2"></div>
+
+    <script src="js/createSwiper.js"></script>
+    <script>
+        var imgList = ["img/img1.webp", "img/img2.jpg", "img/img3.webp", "img/img4.webp", "img/img5.webp", ]
+
+        var swiper1 = new mySwiper(".swiper1", imgList)
+        var swiper2 = new mySwiper(".swiper2", imgList)
+
+    </script>
+</body>
+
+</html>

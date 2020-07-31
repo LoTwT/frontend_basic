@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #showCode {
+            width: 200px;
+            height: 200px;
+            font-size: 80px;
+            color: #ffffff;
+            line-height: 200px;
+            text-align: center;
+            position: fixed;
+            left: calc(50% - 100px);
+            top: 200px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="showCode"></div>
+
+    <script>
+        var score = 0
+
+        function randomCode() {
+            // Math.random() 随机[0,1)
+            var randoNum = 97 + parseInt(Math.random() * 26)
+            var randomStr = String.fromCharCode(randoNum)
+            // 将字符串的小写转成大写
+            var ucStr = randomStr.toUpperCase()
+            var showCodeDiv = document.querySelector("#showCode")
+            showCodeDiv.innerHTML = ucStr
+        }
+        randomCode()
+
+        var body = document.body
+        body.onkeypress = function () {
+            var keyCode = event.key.toUpperCase()
+            var showCodeDiv = document.querySelector("#showCode")
+            if (keyCode === showCodeDiv.innerHTML) {
+                console.log("+1");
+                score += 1
+                randomCode()
+            }
+        }
+
+        var fn10 = function () {
+            alert("你1分钟能敲" + score * 6 + "个单词")
+        }
+        setTimeout(fn10, 10000)
+    </script>
+</body>
+
+</html>
