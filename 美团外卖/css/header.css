@@ -36,7 +36,6 @@
 .header .top-wrapper .search-wrapper {
   width: 100%;
   height: 31px;
-  background: pink;
   padding: 0 104px 0 50px;
   /* 设置盒子从边框开始计算 */
   box-sizing: border-box;
@@ -47,7 +46,6 @@
   height: 31px;
   border: 0;
   box-sizing: border-box;
-  background-color: #cdcdcd;
   border-radius: 25px;
   padding-left: 28px;
   /* 去除选中时的边框 */
@@ -65,7 +63,6 @@
 .header .top-wrapper .more-wrapper {
   width: 65px;
   height: 24px;
-  background: orange;
   position: absolute;
   right: 0;
   top: 0;
@@ -100,4 +97,82 @@
   display: block;
   float: left;
   margin-right: 1px;
+}
+
+/* 主体内容样式 */
+.header .content-wrapper {
+  padding: 17px 10px 11px;
+  height: 50px;
+}
+
+.header .content-wrapper .icon {
+  width: 50px;
+  height: 50px;
+  background-size: 135% 100%;
+  background-position: center;
+  border-radius: 5px;
+  float: left;
+}
+
+.header .content-wrapper .name {
+  float: left;
+  padding: 18px 0 0 12px;
+}
+
+.header .content-wrapper .name h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header .content-wrapper .collect {
+  width: 25px;
+  height: 37px;
+  float: right;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.header .content-wrapper .collect img {
+  width: 20px;
+  height: 20px;
+}
+
+.header .content-wrapper .collect span {
+  margin-top: 7px;
+  color: white;
+  font-size: 11px;
+}
+
+/* 公告内容样式 */
+.header .bulletin-wrapper {
+  height: 16px;
+  padding: 0 10px;
+}
+
+.header .bulletin-wrapper .icon {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 6px;
+}
+
+.header .bulletin-wrapper .text {
+  font-size: 11px;
+  color: white;
+  float: left;
+  line-height: 16px;
+}
+
+.header .bulletin-wrapper .detail {
+  color: white;
+  float: right;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+.header .bulletin-wrapper .detail span {
+  font-size: 16px;
+  line-height: 16px;
+  float: right;
 }
