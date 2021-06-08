@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.nav .line {
+.nav .active .line {
   width: 20px;
   height: 2px;
   display: inline-block;
