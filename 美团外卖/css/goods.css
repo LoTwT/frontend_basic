@@ -23,6 +23,10 @@
   color: #333333;
   line-height: 17px;
   vertical-align: middle;
+
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
@@ -184,4 +188,58 @@
   height: 26px;
   color: #ffd161;
   position: relative;
+}
+
+/* 购物车 (无商品) */
+.shopcart-wrapper {
+  width: 100%;
+  height: 51px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 99;
+  background: #514f4f;
+}
+
+.shopcart-wrapper .content-left {
+  flex: 1;
+}
+
+.shopcart-wrapper .content-left .logo-wrapper {
+  width: 50px;
+  height: 50px;
+  background: #666666;
+  border-radius: 50%;
+  position: relative;
+  top: -14px;
+  left: 10px;
+  text-align: center;
+  float: left;
+}
+
+.shopcart-wrapper .content-left .logo-wrapper .logo {
+  font-size: 28px;
+  color: #c4c4c4;
+  line-height: 50px;
+}
+
+.shopcart-wrapper .content-left .desc-wrapper {
+  float: left;
+  margin-left: 13px;
+}
+
+.shopcart-wrapper .content-left .desc-wrapper .tip {
+  font-size: 12px;
+  color: #bab9b9;
+  line-height: 51px;
+}
+
+.shopcart-wrapper .content-right {
+  flex: 0 0 110px;
+  font-size: 15px;
+  color: #bab9b9;
+  line-height: 51px;
+  text-align: center;
+  font-weight: bold;
 }
