@@ -1,0 +1,52 @@
+.goods {
+  display: flex;
+  position: absolute;
+  top: 190px;
+  bottom: 51px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.goods .menu-wrapper {
+  flex: 0 0 85px;
+  background-color: #f4f4f4;
+}
+
+.goods .menu-wrapper .menu-item {
+  padding: 16px 23px 15px 10px;
+  border-bottom: 1px solid #e4e4e4;
+  position: relative;
+}
+
+.goods .menu-wrapper .menu-item .text {
+  font-size: 13px;
+  color: #333333;
+  line-height: 17px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.goods .menu-wrapper .menu-item .text .icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.goods .menu-wrapper .menu-item.current {
+  background: white;
+  font-weight: bold;
+}
+
+.goods .menu-wrapper .menu-item .num {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: red;
+	color: white;
+	text-align: center;
+	font-size: 7px;
+	line-height: 13px;
+}
