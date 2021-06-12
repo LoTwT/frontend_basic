@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./common/font/style.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/ratings.css">
   <title>评价</title>
 </head>
 
@@ -69,13 +70,114 @@
     <!-- 导航 -->
     <div class="nav">
       <a href="./index.html" class="nav-item">点菜<i class="line"></i></a>
-      <a href="./ratings.html" class="nav-item active">评价<i class="line"></i></a>
+      <a href="./ratings.html" class="nav-item active">评价(3682)<i class="line"></i></a>
       <a href="./seller.html" class="nav-item">商家<i class="line"></i></a>
     </div>
 
     <!-- 主体内容(评价) -->
     <div class="ratings">
-      ratings
+      <div class="ratings-wrapper">
+        <div class="overview">
+          <div class="overview-left">
+            <div class="comment-score">
+              <p class="score">4.7</p>
+              <p class="text">商家评分</p>
+            </div>
+            <div class="other-score">
+              <div class="quality-score item">
+                <span class="text">口味</span>
+                <div class="star">
+                  <span class="star-item on"></span>
+                  <span class="star-item on"></span>
+                  <span class="star-item on"></span>
+                  <span class="star-item on"></span>
+                  <span class="star-item half"></span>
+                </div>
+              </div>
+              <div class="pack-score item">
+                <span class="text">包装</span>
+                <div class="star">
+                  <span class="star-item on"></span>
+                  <span class="star-item on"></span>
+                  <span class="star-item on"></span>
+                  <span class="star-item on"></span>
+                  <span class="star-item half"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overview-right">
+            <div class="delivery-score">
+              <p class="score">4.8</p>
+              <p class="text">配送评分</p>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="rating-select">
+            <span class="item active">全部</span>
+            <span class="item">有图</span>
+            <span class="item">
+              <img src="./img//user.png" alt="user">
+              点评(3.5分)
+            </span>
+          </div>
+          <div class="labels-view">
+            <span class="item">味道赞45</span>
+            <span class="item">服务好20</span>
+            <span class="item">满意11</span>
+            <span class="item">少送赠送5</span>
+            <span class="item">贵4</span>
+            <span class="item">早餐3</span>
+          </div>
+          <ul class="rating-list">
+            <li class="comment-item">
+              <div class="comment-header">
+                <img src="./img/xmx.jpeg" alt="xmx">
+              </div>
+              <div class="comment-main">
+                <div class="user">用户1</div>
+                <div class="time">2023.10.14</div>
+                <div class="star-wrapper">
+                  <span class="text">评分</span>
+                  <div class="star">
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                  </div>
+                </div>
+                <div class="content">
+                  虽然配送师傅迟到了有一会儿，但是态度非常好，一直说对不起，都是打工的，我非常体谅配送师傅的心情！谢谢师傅~
+                </div>
+              </div>
+            </li>
+            <li class="comment-item">
+              <div class="comment-header">
+                <img src="./img/cat.jpeg">
+              </div>
+              <div class="comment-main">
+                <div class="user">用户2</div>
+                <div class="time">2023.08.31</div>
+                <div class="star-wrapper">
+                  <span class="text">评分</span>
+                  <div class="star">
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                    <span class="star-item on"></span>
+                  </div>
+                </div>
+                <div class="content">
+                  #奶油坚果酱中套餐#不好吃。还是奥尔良，麦辣鸡腿那些最经典的汉堡好吃。薯条软得不能再软了。我备注了可乐换芬达也没有换。#麦辣鸡翅2块#就还好，里面的肉挺嫩的，很入味。
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
