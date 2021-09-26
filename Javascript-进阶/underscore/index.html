@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./underscore.js"></script>
+    <script>
+      console.log(
+        _([1, 2, 3, 3, 4, 4, 5, "a", "A", "a"])
+          .chain()
+          .unique(function (item) {
+            return typeof item === "string" ? item.toLowerCase() : item
+          })
+          .template()
+          .end(),
+      )
+      console.log(
+        _.unique([1, 2, 3, 3, 4, 4, 5, "a", "A", "a"], function (item) {
+          return typeof item === "string" ? item.toLowerCase() : item
+        }),
+      )
+    </script>
+  </body>
+</html>
