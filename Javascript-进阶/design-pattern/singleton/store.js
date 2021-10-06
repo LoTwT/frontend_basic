@@ -1,8 +1,7 @@
 function Store() {
-  this.store = {}
-
   if (Store.install) return Store.install
 
+  this.store = {}
   Store.install = this
 }
 
