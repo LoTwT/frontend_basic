@@ -1,0 +1,27 @@
+{
+  "name": "frontend_basic",
+  "version": "1.0.0",
+  "description": "frontend_basic",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoTwT/frontend_basic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoTwT/frontend_basic/issues"
+  },
+  "homepage": "https://github.com/LoTwT/frontend_basic#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
