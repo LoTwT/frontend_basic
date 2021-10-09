@@ -2,10 +2,12 @@ lockfileVersion: 5.3
 
 specifiers:
   express: ^4.17.1
+  node-fetch: ^3.0.0
   nodemon: ^2.0.13
 
 dependencies:
   express: registry.nlark.com/express/4.17.1
+  node-fetch: registry.npmmirror.com/node-fetch/3.0.0
 
 devDependencies:
   nodemon: registry.npmmirror.com/nodemon/2.0.13
@@ -1339,11 +1341,27 @@ packages:
       wrap-ansi: registry.nlark.com/wrap-ansi/7.0.0
     dev: true
 
+  registry.npmmirror.com/data-uri-to-buffer/3.0.1:
+    resolution: {integrity: sha1-WUuJc5OMW8LDMEZTV4U0GrxPNjY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/data-uri-to-buffer/download/data-uri-to-buffer-3.0.1.tgz}
+    name: data-uri-to-buffer
+    version: 3.0.1
+    engines: {node: '>= 6'}
+    dev: false
+
   registry.npmmirror.com/emoji-regex/8.0.0:
     resolution: {integrity: sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emoji-regex/download/emoji-regex-8.0.0.tgz}
     name: emoji-regex
     version: 8.0.0
     dev: true
+
+  registry.npmmirror.com/fetch-blob/3.1.2:
+    resolution: {integrity: sha1-a8Q4Z184UezqUXWKyR9qHNG6yr0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fetch-blob/download/fetch-blob-3.1.2.tgz}
+    name: fetch-blob
+    version: 3.1.2
+    engines: {node: ^12.20 || >= 14.13}
+    dependencies:
+      web-streams-polyfill: registry.npmmirror.com/web-streams-polyfill/3.1.1
+    dev: false
 
   registry.npmmirror.com/glob-parent/5.1.2:
     resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob-parent/download/glob-parent-5.1.2.tgz}
@@ -1381,6 +1399,16 @@ packages:
     resolution: {integrity: sha1-MKWGTrPrsKZvLr5tcnrwagnYbgo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ms/download/ms-2.1.1.tgz}
     name: ms
     version: 2.1.1
+
+  registry.npmmirror.com/node-fetch/3.0.0:
+    resolution: {integrity: sha1-edpxRqUgA28sX2ROSiYJXxfkEeo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/node-fetch/download/node-fetch-3.0.0.tgz}
+    name: node-fetch
+    version: 3.0.0
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      data-uri-to-buffer: registry.npmmirror.com/data-uri-to-buffer/3.0.1
+      fetch-blob: registry.npmmirror.com/fetch-blob/3.1.2
+    dev: false
 
   registry.npmmirror.com/nodemon/2.0.13:
     resolution: {integrity: sha1-Z9QNOk1b2ECqeFxWWHJpz89dJKo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nodemon/download/nodemon-2.0.13.tgz}
@@ -1427,3 +1455,10 @@ packages:
     dependencies:
       ansi-regex: registry.nlark.com/ansi-regex/5.0.1
     dev: true
+
+  registry.npmmirror.com/web-streams-polyfill/3.1.1:
+    resolution: {integrity: sha1-FRby1OqPG9v+0V62XLLfhwmMg2Q=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/web-streams-polyfill/download/web-streams-polyfill-3.1.1.tgz}
+    name: web-streams-polyfill
+    version: 3.1.1
+    engines: {node: '>= 8'}
+    dev: false
