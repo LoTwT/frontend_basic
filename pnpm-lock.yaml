@@ -1,12 +1,16 @@
 lockfileVersion: 5.3
 
 specifiers:
+  body-parser: ^1.19.0
   express: ^4.17.1
+  express-fileupload: ^1.2.1
   node-fetch: ^3.0.0
   nodemon: ^2.0.13
 
 dependencies:
+  body-parser: registry.nlark.com/body-parser/1.19.0
   express: registry.nlark.com/express/4.17.1
+  express-fileupload: registry.npmmirror.com/express-fileupload/1.2.1
   node-fetch: registry.npmmirror.com/node-fetch/3.0.0
 
 devDependencies:
@@ -126,6 +130,15 @@ packages:
     dependencies:
       fill-range: registry.nlark.com/fill-range/7.0.1
     dev: true
+
+  registry.nlark.com/busboy/0.3.1:
+    resolution: {integrity: sha1-FwiZJ0xb84quJ9XGK3EmjNWF/Rs=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/busboy/download/busboy-0.3.1.tgz}
+    name: busboy
+    version: 0.3.1
+    engines: {node: '>=4.5.0'}
+    dependencies:
+      dicer: registry.nlark.com/dicer/0.3.0
+    dev: false
 
   registry.nlark.com/bytes/3.1.0:
     resolution: {integrity: sha1-9s95M6Ng4FiPqf3oVlHNx/gF0fY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/bytes/download/bytes-3.1.0.tgz}
@@ -323,6 +336,15 @@ packages:
     resolution: {integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/destroy/download/destroy-1.0.4.tgz}
     name: destroy
     version: 1.0.4
+    dev: false
+
+  registry.nlark.com/dicer/0.3.0:
+    resolution: {integrity: sha1-6s2Ys7+/kuirXC/bcaqsRLsGuHI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/dicer/download/dicer-0.3.0.tgz}
+    name: dicer
+    version: 0.3.0
+    engines: {node: '>=4.5.0'}
+    dependencies:
+      streamsearch: registry.nlark.com/streamsearch/0.1.2
     dev: false
 
   registry.nlark.com/dot-prop/5.3.0:
@@ -1116,6 +1138,13 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  registry.nlark.com/streamsearch/0.1.2:
+    resolution: {integrity: sha1-gIudDlb8Jz2Am6VzOOkpkZoanxo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/streamsearch/download/streamsearch-0.1.2.tgz}
+    name: streamsearch
+    version: 0.1.2
+    engines: {node: '>=0.8.0'}
+    dev: false
+
   registry.nlark.com/strip-json-comments/2.0.1:
     resolution: {integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/strip-json-comments/download/strip-json-comments-2.0.1.tgz}
     name: strip-json-comments
@@ -1353,6 +1382,15 @@ packages:
     name: emoji-regex
     version: 8.0.0
     dev: true
+
+  registry.npmmirror.com/express-fileupload/1.2.1:
+    resolution: {integrity: sha1-c6x5i9FCR9UQrbHkOa8kIMg2fe0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/express-fileupload/download/express-fileupload-1.2.1.tgz}
+    name: express-fileupload
+    version: 1.2.1
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      busboy: registry.nlark.com/busboy/0.3.1
+    dev: false
 
   registry.npmmirror.com/fetch-blob/3.1.2:
     resolution: {integrity: sha1-a8Q4Z184UezqUXWKyR9qHNG6yr0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fetch-blob/download/fetch-blob-3.1.2.tgz}
