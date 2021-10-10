@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Chatroom</h2>
+    <div></div>
+    <label>say</label>
+    <input />
+    <button>send</button>
+
+    <script>
+      // wss => WebSocket Secure
+      // wss -> tls -> tcp/ip
+      const client = new WebSocket("ws://127.0.0.1:8080")
+
+      client.onopen = () => {
+        console.log("connection open")
+      }
+    </script>
+  </body>
+</html>
